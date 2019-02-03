@@ -1,0 +1,44 @@
+docker run (nombrecontenedor:versión o tag contenedor) -d // Esto hace que se corra un contenedor y con el -d nos permite hacer que este contenedor quede corriendo indiferentemente.
+docker ps // Nos permite ver los contenedores que están corriendo actualmetne en el docker en cuestión.
+docker pull (nombrecontentedor:versión) // Esto descarga una imagen de Docker si queremos tenerla de antemano.
+docker exec -it (IDContenedor) sh o /bin/bash // Nos permite crear una shell interactiva dentro de nuestro contenedor, sin el -it no podría hacerse esto.
+docker commit (IDContenedor) // Esto nos crea una imagen del contenedor que seleccionamos.
+docker image ls | head // Esto nos muestra una lista de todas las imagenes de contenedores que existen en el sistema.
+docker image tag (IDcontenedor) (tag:versión) // Nos permite taggear una imagen para que sea más fácil acceder a esta.
+docker image history (IDContenedor) // Nos permite ver un historial de todos los comandos que han sido corridos en la imagen.
+docker build -t (NombreContenedor:Versión) // Hace que un contenedor se cree iniciando desde todo lo que el dockerfile contiene.
+docker run -p (puertoPC:puertocontenedor) (IDContenedor) // Esto hace que el puerto de la PC redireccione al puerto del docker en cuestión.
+docker run -v (directoriopc:directoriocontenedor) (IDContenedor) // Nos permite "compartir" este directorio o imagen seleccionado entre el contenedor y la PC.
+docker stop (IDContenedor) // Detiene a un contenedor.
+
+
+
+
+
+
+
+vim Dockerfile // Todas las imagenes que creemos se iniciarán después de correr todo lo que guardemos en el dockerfile.
+------------------------
+Siempre comienza desde el FROM: que nos indica en qué se basa el contenedor.
+El RUN: nos indica qué se correrá apenas de inicie este contenedor. Estos comandos tienen que ser todos sin interacción humana.
+------------------------
+
+docker-compose.yml // Nos permite definir servicios y cómo se corerrán los diferentes servicios del mismo en el contenedor.
+------------EJ------------
+version: "2"
+
+services:
+
+  samba:
+    image: dperson/samba:rpi
+    restart: always
+    command: '-u "pi;password" -s "media;/media;yes;no"'
+    stdin_open: true
+    tty: true
+    ports:
+      - 139:130
+      - 445:445
+    volumes:
+      - /usr/share/zoneinfo/America/Argentina/Mendoza:/etc/localtime
+      - /home/pi/media:/media
+-----------EJ------------
