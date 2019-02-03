@@ -1,7 +1,7 @@
 # Home Lab Experimental
 
 # Español
-Esto es donde voy documentando lo que descubro y aprendo investigando sobre un laboratorio informático en casa. 
+Esto es donde voy documentando lo que descubro y aprendo investigando sobre un laboratorio informático en casa.
 Los comandos se pueden encontrar acá: <a href="https://github.com/stonemantlearg/Home-Lab/blob/master/Docker/Comandos%20Basicos">Comandos Docker</a> 
       
 # English
