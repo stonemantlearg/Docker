@@ -1,0 +1,16 @@
+Docker permite usar diferentes tipos de "adaptadores" de red mediante su propia red virtualizada, estos son:
+
+#Bridge
+Nos permite realiza un puente desde nuestra infertaz red física a la interfaz red virtual. Es decir, redirecciona el tráfico.
+
+#Host
+Bindea los puertos de la máquina al contenedor, con el IP de la máquina, y el tráfico pasa directamente hacia el contenedor sin tener en cuenta la base de las máquinas virtuales.
+
+#Overlay
+Sirve para crear redes virtuales a través de los contenedores, lo cual nos permite crear varios nodos. Es especialmente útil si usamos docker swarm.
+
+#macvlan
+Permite asignar una dirección MAC al contenedor, por lo que permite al contenedor correr como si fuera una máquina de la red.
+
+#none
+Desactiva completamente la red en el contenedor.
