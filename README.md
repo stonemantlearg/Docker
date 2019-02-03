@@ -1,8 +1,12 @@
 # Home Lab Experimental
 Hardware so far:
-Raspberry Pi 3 B+
-Raspberry Pi Zero W
-Arduino Uno
+<ul>
+  <li>Raspberry Pi 3 B+</li>
+  <li>Raspberry Pi Zero W</li>
+  <li>Arduino Uno</li>
+</ul> 
+
+
 
 # Español
 Esto es donde voy documentando lo que descubro y aprendo investigando sobre un laboratorio informático en casa.
