@@ -11,9 +11,8 @@ docker run -p (puertoPC:puertocontenedor) (IDContenedor) // Esto hace que el pue
 docker run -v (directoriopc:directoriocontenedor) (IDContenedor) // Nos permite "compartir" este directorio o imagen seleccionado entre el contenedor y la PC.
 docker stop (IDContenedor) // Detiene a un contenedor.
 docker run -e (Variable=NuevaVariable) (nombrecontenedor:versión) // Permite cambiar la variable mencionada en una primera instancia por otra que uno elija en el momento de hacerlo.
-
-
-
+docker-compose up -d // Este comando levanta todos los contenedores que hayamos configurado previamente en nuestro archivo .yml
+docker logs (IDContenedor) // Nos permite ver lo que ese contenedor en cuestión hizo; es decir, los parámetros y los comandos que utilizó.
 
 
 
@@ -23,7 +22,7 @@ Siempre comienza desde el FROM: que nos indica en qué se basa el contenedor.
 El RUN: nos indica qué se correrá apenas de inicie este contenedor. Estos comandos tienen que ser todos sin interacción humana.
 ------------------------
 
-docker-compose.yml // Nos permite definir servicios y cómo se corerrán los diferentes servicios del mismo en el contenedor. (Ejemplo citado de PeladoNerd)
+docker-compose.yml // Nos permite definir servicios y cómo se corerrán los diferentes servicios del mismo en el contenedor. (Ejemplo citado de PabloBKS)
 ------------EJ------------
 version: "2"
 
@@ -42,4 +41,5 @@ services:
       - /usr/share/zoneinfo/America/Argentina/Mendoza:/etc/localtime
       - /home/pi/media:/media
 -----------EJ------------
-https://gist.github.com/pablokbs/da8fb5c52d2268e1a65ae265849125e4 // Ejemplo MYSQL (También de PeladoNerd)
+https://gist.github.com/pablokbs/da8fb5c52d2268e1a65ae265849125e4 // Ejemplo MYSQL (También de PabloBKS)
+https://gist.github.com/pablokbs/0f7c72cae447233d47b249bae1e94c09 // Ejemplo SAMBA/Torrent (PabloBKS, de nuevo)
