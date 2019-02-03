@@ -42,4 +42,4 @@ services:
       - /usr/share/zoneinfo/America/Argentina/Mendoza:/etc/localtime
       - /home/pi/media:/media
 -----------EJ------------
- <a href="https://gist.github.com/pablokbs/da8fb5c52d2268e1a65ae265849125e4">Ejemplo MYSQL</a> 
+https://gist.github.com/pablokbs/da8fb5c52d2268e1a65ae265849125e4 // Ejemplo MYSQL (También de PeladoNerd)
